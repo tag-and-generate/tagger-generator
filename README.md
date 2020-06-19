@@ -1,10 +1,4 @@
-# code
-Code for Politeness Transfer: A Tag and Generate Approach
+# Tagger and Generator
 
-
-Thanks for your interest in our work.
-
-The code will be released on/before 6/19/2020 (ACL Publication Date).
-
-For any queries, please reach out to Aman (amadaan@cs.cmu.edu)
-
+- Dataset preparation: [tag-and-generate/tagger-generator/tag-and-generate-data-prep](https://github.com/tag-and-generate/tagger-generator/tree/master/tag-and-generate-data-prep)
+- Training, inference, evaluation: [tag-and-generate/tagger-generator/tag-and-generate-train](https://github.com/tag-and-generate/tagger-generator/tree/master/tag-and-generate-train)
