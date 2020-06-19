@@ -87,3 +87,9 @@ Where:
 
 - `hypothesis_filepath:` The full path to the transferred output from trained model (hypothesis).
 - `reference_filepath:` The full path to the ideal output (for BLEU-r) or the original input file (for BLEU-s).
+
+
+## References
+
+- The code for evaluation has been partially borrowed from https://github.com/Maluuba/nlg-eval
+- Most of the code for the training pipeline has been borrowed from https://github.com/pmichel31415/jsalt-2019-mt-tutorial
