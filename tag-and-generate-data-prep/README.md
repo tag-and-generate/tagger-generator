@@ -22,7 +22,8 @@ Where:
 
 - `label0` and `label1` are tags that identify individual styles. This explicit assignment is important for unimodal cases, such as politeness and captions (please see the paper for more details)
 
-- `is_unimodal` should be set to `True` for datasets that have only one stylistic information 
+- `is_unimodal` should be set to `True` for datasets that have only one stylistic information. `style_0_label` should be used to speficify the style of interest, and `style_1_label` should be the tag for a neutral/style free corpus. In case of politeness transfer, you can use `style_0_label` as `P_9` and `style_1_label` as `P_0` or `P_1`.
+
 Please see run.py for the details on other options.
 
 ## Outputs
