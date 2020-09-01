@@ -88,6 +88,9 @@ Where:
 - `hypothesis_filepath:` The full path to the transferred output from trained model (hypothesis).
 - `reference_filepath:` The full path to the ideal output (for BLEU-r) or the original input file (for BLEU-s).
 
+## Trained Models
+
+The trained models can be found [here](https://drive.google.com/drive/folders/1tXLC4WbXc_WLgvQu2mTa3jDe0efZ3dz1?usp=sharing).
 
 ## References
 
