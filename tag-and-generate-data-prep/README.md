@@ -16,7 +16,16 @@ python src/run.py --data_pth PTH\
 ```
 
 Where:
-- `PTH` should point to a tab-separated file (tsv) that contains the corpus. We assume that the corpus is made up of a set of sentences. The `tsv` is supposed to have three fields: 1) txt: the sentence, 2) split: train/test/val, and 3) style: label that identifies the style of the sentence (one of `style_0_label` or `style_1_label`)
+- `PTH` should point to a tab-separated file (tsv) that contains the corpus. We assume that the corpus is made up of a set of sentences. The `tsv` is supposed to have three fields: 1) txt: the sentence, 2) split: train/test/val, and 3) style: label that identifies the style of the sentence (one of `label0` or `label1`). Sample:
+
+| txt 	| style 	| split 	|
+|-	|-	|-	|
+| How've you been, Mrs. Spencer? 	| catcher 	| test 	|
+| C'mon, c'mon 	| catcher 	| train 	|
+| And the place death, considering who thou art, 	| romeo-juliet 	| train 	|
+| He's got a lot of dough, now. 	| catcher 	| test 	|
+
+
 
 - `OUTPATH` is the location of the output
 
