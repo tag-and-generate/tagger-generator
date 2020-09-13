@@ -7,8 +7,15 @@
 
 ## Walkthrough 
 We will now present an example of training the politeness transfer system from scratch.
+This walkthrough has five parts:
 
-### Step 1: Get the code
+1. [Setting up the code](#Step-1:-Getting-the-code)
+2. [Downloading the training data](#Step-2:-Getting-the-training-data)
+3. [Preparing parallel data for training](#Step-3:-Preparing-parallel-data-for-training)
+4. [Training](#Step-4:-Training-the-tagger-and-generator)
+5. [Running inference](#-Step-5:-Running-inference)
+
+### Step 1: Getting the code
 
 We begin by cloning this repo:
 
@@ -17,6 +24,7 @@ git clone https://github.com/tag-and-generate/tagger-generator.git
 ```
 The cloned folder contains: i) ``tag-and-generate-data-prep`` the codebase used for creating the parallel tag and generate dataset, and ii) ``tag-and-generate-train``, the training code.
 
+Each of these folders has a ``requirements.txt`` file that can be used to download the dependencies.
 
 Next, let's create a folder inside ``tagger-generator`` to save all the datasets/tags:
 
@@ -26,7 +34,7 @@ mkdir data
 ```
 
 
-### Step 2: Get the training data.
+### Step 2: Getting the training data.
 
 The training data in a ready to use format is located [here](https://drive.google.com/file/d/1E9GHwmVM9DL9-KiaIaG5lm_oagLWe908/view?usp=sharing).
 
@@ -70,7 +78,7 @@ Further, the data folder has the ``politeness.tsv`` file that we just downloaded
 politeness_processed.zip  politeness.tsv
 ```
 
-### Step 3: Prepare parallel data for training
+### Step 3: Preparing parallel data for training
 
 We prepare the parallel data using ``tag-and-generate-data-prep``:
 
@@ -109,7 +117,7 @@ To understand these, let's take a sample sentence ```please get back to me if yo
 With the data files ready, we are ready to run training.
 
 
-### Step 4: Train the tagger and generator
+### Step 4: Training the tagger and generator
 
 All the training and inference related scripts/code is present in ``tag-and-generate-train``, so let's ``cd`` to it.
 
