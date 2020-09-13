@@ -7,8 +7,7 @@
 
 ## Walkthrough 
 We will now present an example of training the politeness transfer system from scratch.
-
-This walkthrough has five parts:
+The process has five steps:
   * [Step 1: Getting the code](#step-1-getting-the-code)
   * [Step 2: Getting the training data.](#step-2-getting-the-training-data)
   * [Step 3: Preparing parallel data for training](#step-3-preparing-parallel-data-for-training)
