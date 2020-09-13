@@ -89,7 +89,7 @@ function add_eos() {
 
 
 
-# Step 1: Run Preprocess/BPE
+# Step 1: Run Preprocess/BPE on the input
 TAGGER_INPUT="${tag_generate_base}/${jobname}_tagger_input"
 if [ $BPE -eq 1 ]; then
     echo "Running BPE on input"
@@ -103,7 +103,7 @@ echo "Adding eos to the input"
 add_eos "$TAGGER_INPUT"
 
 
-# Step 2: Tag
+# Step 2: Tag the input
 echo "Running tagger"
 infer "$TAGGER_INPUT" "en" "$tagger_target" "models/${dataset}/${MODEL_PTH}/en-${tagger_target}-tagger.pt"\
       "${tag_generate_base}/${jobname}_tagged" 1
@@ -111,7 +111,7 @@ infer "$TAGGER_INPUT" "en" "$tagger_target" "models/${dataset}/${MODEL_PTH}/en-$
 sed -i "s/${src_tag}/${tgt_tag}/g" "${tag_generate_base}/${jobname}_tagged"
 
 
-# Step 3: Run Preprocess/BPE
+# Step 3: Run Preprocess/BPE on the tagger output
 GENERATOR_INPUT="${tag_generate_base}/${jobname}_generator_input"
 if [ $BPE -eq 1 ]; then
     echo "Running BPE on masked output"
