@@ -7,14 +7,14 @@
 
 ## Walkthrough 
 We will now present an example of training the politeness transfer system from scratch.
+
 This walkthrough has five parts:
-
-1. [Setting up the code](#Step-1:-Getting-the-code)
-2. [Downloading the training data](#Step-2:-Getting-the-training-data)
-3. [Preparing parallel data for training](#Step-3:-Preparing-parallel-data-for-training)
-4. [Training](#Step-4:-Training-the-tagger-and-generator)
-5. [Running inference](#-Step-5:-Running-inference)
-
+  * [Step 1: Getting the code](#step-1-getting-the-code)
+  * [Step 2: Getting the training data.](#step-2-getting-the-training-data)
+  * [Step 3: Preparing parallel data for training](#step-3-preparing-parallel-data-for-training)
+  * [Step 4: Training the tagger and generator](#step-4-training-the-tagger-and-generator)
+  * [Step 5: Running inference](#step-5-running-inference)
+  
 ### Step 1: Getting the code
 
 We begin by cloning this repo:
