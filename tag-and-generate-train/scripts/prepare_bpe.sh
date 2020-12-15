@@ -2,7 +2,7 @@
 
 tgt="$1"
 base_folder="$2"
-VOCAB_SIZE=1600
+VOCAB_SIZE=16000
 python src/subwords.py train \
     --model_prefix "${base_folder}"/en${tgt}_subwords \
     --vocab_size "${VOCAB_SIZE}" \
