@@ -12,23 +12,19 @@ Options:
     --style_label_col=<str>                 Name of the column that has style label column [default: style]
     --thresh=<float>                        tf-idf ratio threshold [default: 0.90]
     --is_unimodal=<bool>                    Whether the dataset is unimodal (like politeness) or has two styles (like yelp)
+    --gen_tags=<bool>                       Whether the style labels need to be generated again [default: True]
 """
 from docopt import docopt
 import json
 import pandas as pd
 import pandas as pd
-import numpy as np
-import tempfile
-import sys
 import subprocess
-from collections import Counter
-from typing import List
 import logging
 
 from src.style_tags import TFIDFStatsGenerator, RelativeTagsGenerator, TrainDataGen
 
 
-def tag_style_markers(data_pth, outpath, style_0_label, style_1_label, tgt_lang="tagged", thresh=0.90, ngram_range=(1, 2),
+def tag_style_markers(data_pth: str, outpath: str, style_0_label: str, style_1_label: str, tgt_lang="tagged", thresh=0.90, ngram_range=(1, 2),
                       ignore_from_tags=None, style_label_col="label", drop_duplicates=False,
                       gen_tags=True):
     """Runs tag generator. After this step, the following files are generated in the ``outpath`` directory:
@@ -40,14 +36,14 @@ def tag_style_markers(data_pth, outpath, style_0_label, style_1_label, tgt_lang=
         A combination of the above files is sufficient to generate training data 
         for seq2seq models used by the tag-and-generate approach.
     Args:
-        data_pth ([type]): Path to a file with the data. Each file should have the following columns:
+        data_pth ([str]): Path to a file with the data. Each file should have the following columns:
             txt: The actual text
             split: train/test/dev
             style_label_col: indicates the style
-        outpath ([type]): [description]
-        style_0_label ([type]): [description]
-        style_1_label ([type]): [description]
-        tgt_lang ([type]): [description]
+        outpath ([str]): Path to the folder where the output files are written.
+        style_0_label ([str]): Label for the 0th style.
+        style_1_label ([str]): abel for the 1st style.
+        tgt_lang ([str]): [description]
         thresh (float, optional): [description]. Defaults to 0.90.
         ngram_range (tuple, optional): [description]. Defaults to (1, 2).
         ignore_from_tags ([type], optional): [description]. Defaults to None.
@@ -146,7 +142,8 @@ if __name__ == '__main__':
                       thresh=float(args["--thresh"]),
                       ngram_range=(int(args["--ngram_range_min"]),
                                    int(args["--ngram_range_max"])),
-                      style_label_col=args["--style_label_col"])
+                      style_label_col=args["--style_label_col"],
+                      gen_tags=(args["--gen_tags"] == "True"))
 
     
 
