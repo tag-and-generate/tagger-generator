@@ -141,7 +141,7 @@ typing==3.7.4.1
 tzlocal==2.0.0
 unicodecsv==0.14.1
 update-checker==0.16
-urllib3==1.25.3
+urllib3==1.25.8
 validators==0.14.0
 wasabi==0.2.2
 wcwidth==0.1.7
