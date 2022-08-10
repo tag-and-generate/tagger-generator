@@ -63,7 +63,7 @@ mistune==0.8.4
 more-itertools==7.2.0
 munkres==1.1.2
 murmurhash==1.0.2
-nbconvert==5.6.0
+nbconvert==6.3.0
 nbformat==4.4.0
 networkx==2.3
 neuralcoref==4.0
